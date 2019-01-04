@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Otel.Models.Abstracts;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,6 +23,9 @@ namespace Otel.Models.Entities
 
         [ForeignKey("RoomCategoryId")]
         public RoomCategory RoomCategory { get; set; }
+
+        public virtual ICollection<ReservationDetail> ReservationDetails { get; set; } = new HashSet<ReservationDetail>();
+
 
     }
 }

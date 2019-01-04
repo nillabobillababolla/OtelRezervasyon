@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Otel.Models.Abstracts;
@@ -25,5 +26,7 @@ namespace Otel.Models.Entities
         public virtual Reservation Reservation { get; set; }
         [ForeignKey("Id2")]
         public virtual Room Room { get; set; }
+
+
     }
 }
